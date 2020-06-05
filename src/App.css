@@ -1,0 +1,354 @@
+/* =============================================================================
+   HTML5 CSS Reset Minified - Eric Meyer
+   ========================================================================== */
+
+html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,abbr,address,cite,code,del,dfn,em,img,ins,kbd,q,samp,small,strong,sub,sup,var,b,i,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}
+body{line-height:1}
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}
+nav ul{list-style:none}
+blockquote,q{quotes:none}
+blockquote:before,blockquote:after,q:before,q:after{content:none}
+a{margin:0;padding:0;font-size:100%;vertical-align:baseline;background:transparent;text-decoration:none}
+mark{background-color:#ff9;color:#000;font-style:italic;font-weight:bold}
+del{text-decoration:line-through}
+abbr[title],dfn[title]{border-bottom:1px dotted;cursor:help}
+table{border-collapse:collapse;border-spacing:0}
+hr{display:block;height:1px;border:0;border-top:1px solid #ccc;margin:1em 0;padding:0}
+input,select{vertical-align:middle}
+li{list-style:none}
+
+
+/* =============================================================================
+   My CSS
+   ========================================================================== */
+
+/* ---- base ---- */
+
+html,body{
+  width:100%;
+  height:100%;
+  background:#111;
+  font-family: monospace, sans-serif;
+  line-height: 1.4;
+}
+
+canvas{
+  display:block;
+  vertical-align:bottom;
+}
+
+
+/* ---- stats.js ---- */
+
+.count-particles{
+  background: #000022;
+  position: absolute;
+  top: 48px;
+  left: 0;
+  width: 80px;
+  color: #13E8E9;
+  font-size: .8em;
+  text-align: left;
+  text-indent: 4px;
+  line-height: 14px;
+  padding-bottom: 2px;
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight: bold;
+}
+
+.js-count-particles{
+  font-size: 1.1em;
+}
+
+#stats,
+.count-particles{
+  -webkit-user-select: none;
+  margin-top: 5px;
+  margin-left: 5px;
+}
+
+#stats{
+  border-radius: 3px 3px 0 0;
+  overflow: hidden;
+}
+
+.count-particles{
+  border-radius: 0 0 3px 3px;
+}
+
+#root{
+  height: 100%;
+  width: 100%;
+}
+/* ---- particles.js container ---- */
+
+#tsparticles{
+  width: 100%;
+  height: 100%;
+  background-color: #b61924;
+
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+}
+.avatar {
+  position: absolute;
+  height: 450px;
+  width: 450px;
+//background-color: #de9294;
+  top: 30%;
+//border-radius: 50%;
+  right: -225px;
+  text-align: center;
+//color: #4c4343;
+  line-height: 200px;
+  font-family: helvatica, sans-serif;
+  font-size: 38px;
+  clip: rect(0,225px,450px,0);
+}
+.avatar-white{
+  clip: rect(0px,450px, 450px, 225px);
+}
+
+.typewriter {
+  white-space: nowrap;
+  overflow: hidden;
+  -webkit-font-smoothing: antialiased;
+  font-family: 'Source Code Pro', monospace;
+  font-size: 55px;
+  color: rgba(255,255,255,.70);
+  position: absolute;
+  top: 10%;
+  text-align: center;
+  z-index: 1;
+  width: 50%;
+  left: 33%;
+}
+
+/* Animation */
+.typewriter {
+  animation: animated-text 2s steps(30,end) 1s 1 normal both;
+}
+
+/* text animation */
+
+@keyframes animated-text{
+  from{width: 0;}
+  to{width: 457px;}
+}
+
+
+.navigation{
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  color: rgba(255,255,255,.70);
+  font-family: monospace;
+  cursor: pointer;
+}
+
+.slide{
+  height: 100%;
+}
+
+/* ENTER TRANSITION */
+/* Declare transition start properties*/
+.slide-enter {
+  transform: translateX(-100vw);
+  opacity: 0;
+  position: absolute;
+
+}
+
+
+.enter-done {
+  transform: translateX(-70%);
+}
+/* EXIT TRANSITION */
+/*.exit-done {*/
+  /*transform: translateX(0);*/
+  /*opacity: 1;*/
+
+/*}*/
+
+.exit-done {
+  transform: translateX(0%);
+}
+.avatar-white.exit-done {
+  transform: translateX(-50%);
+  transition: transform 100ms linear;
+  opacity: 1;
+  display: inline;
+}
+.particle{
+  height: 100%;
+}
+.creativeMind{
+  width: 50%;
+  height: 100%;
+  display: inline-block;
+  position: absolute;
+  transition: transform 100ms linear
+}
+.BlackMind{
+  width: 70%;
+  height: 100%;
+  display: inline-block;
+  position: relative;
+  left: 25%;
+  vertical-align: top;
+}
+
+.about {
+  font-size: 30px;
+  position: relative;
+  color: #b3b3b3;;
+  top: 2%;
+  text-align: justify;
+  -webkit-font-smoothing: antialiased;
+}
+.about-title {
+  display: inline-block;
+  width: 62%;
+  vertical-align: top;
+  margin: 175px 0 0 30px;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.typewriter h1 {
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid orange; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .15em; /* Adjust as needed */
+  animation:
+          typing 3.5s steps(40, end),
+          blink-caret .75s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 8.5em; }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: orange; }
+}
+
+.work-comp{
+  padding: 0px;
+  height: 100%;
+  width: 100%;
+  position: relative;
+  box-sizing: border-box;
+}
+.about-para{
+  padding: 15px 0;
+  font-size: 18px;
+}
+
+.contact {
+  padding: 30px;
+  width: 100%;
+  position: relative;
+  top: 25%;
+  color: rgba(255,255,255,.70);
+}
+
+.contact-heading{
+  font-size: 30px;
+  padding: 20px 0;
+  text-align: center;
+  font-family: monospace;
+}
+.contact-footer {
+  color: #b61a25;
+  font-size: 18px;
+  text-decoration: none;
+  font-family: monospace;
+  font-weight: bold;
+}
+.tooltip{
+  color: white;
+  position: absolute;
+  top: 22%;
+  padding: 20px;
+  border: 1px solid #b61a25;
+  border-radius: 4px;
+}
+.tooltip:empty{
+  display: none;
+}
+.contact-linkedin{
+  display: block;
+  margin: 0 auto;
+  width: 250px;
+  position: relative;
+}
+.full-stack{
+  display: inline-block;
+  height: 350px;
+}
+@media only screen and (max-width: 700px) {
+  .about{
+    font-size: 16px;
+  }
+  .typewriter {
+    white-space: nowrap;
+    overflow: hidden;
+    font-family: 'Source Code Pro', monospace;
+    font-size: 30px;
+    color: rgba(255,255,255,.70);
+    position: absolute;
+    top: 10%;
+    text-align: center;
+    z-index: 1;
+    width: 50%;
+    left: 20%;
+  }
+  /* Animation */
+  .typewriter {
+    animation: animated-text 2s steps(30,end) 1s 1 normal both;
+  }
+  @keyframes animated-text{
+    from{width: 0;}
+    to{width: 250px;}
+  }
+
+  .avatar {
+    position: absolute;
+    height: 350px;
+    width: 350px;
+  //background-color: #de9294;
+    top: 30%;
+  //border-radius: 50%;
+    right: -175px;
+    text-align: center;
+  //color: #4c4343;
+    line-height: 200px;
+    font-family: helvatica, sans-serif;
+    font-size: 38px;
+    clip: rect(0,175px,350px,0);
+  }
+  .avatar-white{
+    clip: rect(0px,350px, 350px, 175px);
+  }
+  .tooltip{
+    top: 22%;
+    padding: 10px;
+    border: 1px solid #b61a25;
+    border-radius: 4px;
+  }
+  .contact-heading{
+    font-size: 20px;
+  }
+  .contact-footer {
+    font-size: 12px;
+  }
+}
