@@ -4,7 +4,12 @@ import Oracle from "./logo-oracle.png";
 import Avizva from "./av.png";
 import WP from "./WP-logo.png";
 import GMU from "./GMU-logo-1.png";
-
+import {
+    BrowserView,
+    MobileView,
+    isBrowser,
+    isMobile
+} from "react-device-detect";
 
 export default class WorkComponent extends React.Component {
 
@@ -12,13 +17,21 @@ constructor(props){
     super(props);
     this.myRef = React.createRef();
     var myLineChart;
-
 }
     render () {
         return (
             <div className={""}>
                 <div className={"tooltip"} id = "tooltip"/>
-                <canvas id="myChart" width="100" height="100" ref={this.myRef}/>
+                <BrowserView>
+                <div className={"my-chart"}>
+                <canvas id="myChart" ref={this.myRef}/>
+                </div>
+                </BrowserView>
+                <MobileView>
+                    <div className={"my-chart"}>
+                        <canvas id="myMobileChart" width="500" height="1000" ref={this.myRef}/>
+                    </div>
+                </MobileView>
             </div>
         )
     }
@@ -39,8 +52,8 @@ constructor(props){
         gmu.width = 50;
         let o = new Image();
         o.src = Oracle;
-        o.height = 75;
-        o.width = 75;
+        o.height = 50;
+        o.width = 50;
         const chartJson = {
             type: 'line',
             data: {
@@ -60,7 +73,7 @@ constructor(props){
                 layout: {
                     padding: {
                         left: 0,
-                        right: 0,
+                        right: 20,
                         top: 0,
                         bottom: 0
                     }
@@ -75,8 +88,8 @@ constructor(props){
                     text: 'Experience over time',
                     fontColor: 'rgba(255,255,255,.70)',
                     fontFamily: 'monospace',
-                    fontSize: '28',
-                    position: 'bottom'
+                    position: 'bottom',
+                    fontSize: '16'
                 },
                 tooltips: {
                     // Disable the on-canvas tooltip
@@ -112,7 +125,7 @@ constructor(props){
                         },
                         ticks: {
                             fontColor: "#b61924",
-                            fontSize: '20'
+                            fontSize: '12'
                         },
                         gridLines: {
                             display:false
@@ -126,8 +139,9 @@ constructor(props){
                         ticks: {
                             display: false,
                             fontSize: 0,
-                            max: 200,
-                            beginAtZero: true
+                            suggestedMax: 110,
+                            beginAtZero: true,
+                            stepSize: 20
                         }
                     }]
                 }

@@ -9,6 +9,7 @@
     "chart.js": "^2.9.3",
     "react": "^16.13.1",
     "react-contact-form": "0.0.1-rc.2",
+    "react-device-detect": "^1.12.1",
     "react-dom": "^16.13.1",
     "react-particles-js": "^3.2.1",
     "react-script-tag": "^1.1.2",

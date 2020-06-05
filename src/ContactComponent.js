@@ -5,15 +5,10 @@ export default class ContactComponent extends React.Component {
     render () {
         return (
             <div className={"contact"}>
-                <ScriptTag isHydrating={false} type="application/javascript" src="https://platform.linkedin.com/badges/js/profile.js" />
-                <div className={"contact-heading"}>If you’d like to get in touch: -  <a href="mailto:bharti2792@gmail.com" className="contact-footer">Email Me!</a></div>
-                <div class="contact-linkedin">
-                    <div className="LI-profile-badge" data-version="v1" data-size="medium" data-locale="en_US"
-                         data-type="vertical" data-theme="dark" data-vanity="bharti-sharma-b933a967"><a
-                        className="LI-simple-link"
-                        href='https://www.linkedin.com/in/bharti-sharma-b933a967?trk=profile-badge'>Bharti Sharma</a>
-                    </div>
-                </div>
+                <div className={"contact-heading"}>If you’d like to get in touch: -  <a href="mailto:bharti2792@gmail.com" className="contact-footer" >EMAIL ME!</a></div>
+                <div className={"contact-heading"}>If you’d like to see my more projects: -  <a href="https://github.com/bharti27" target="_blank" className="contact-footer">GITHUB</a></div>
+                <div className={"contact-heading"}>If you’d like to know my opinions: -  <a href="https://twitter.com/Tiger_kittyyy" target="_blank" className="contact-footer">TWITTER</a></div>
+                <div className={"contact-heading"}>If you’d like to know my Thoughts: -  <a href="https://medium.com/@bharti2792" target="_blank" className="contact-footer">MEDIUM</a></div>
             </div>
 
         )

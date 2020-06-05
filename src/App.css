@@ -205,13 +205,14 @@ canvas{
   font-size: 30px;
   position: relative;
   color: #b3b3b3;;
-  top: 2%;
+  top: 5%;
+  width: 85%;
+  left: 10%;
   text-align: justify;
   -webkit-font-smoothing: antialiased;
 }
 .about-title {
   display: inline-block;
-  width: 62%;
   vertical-align: top;
   margin: 175px 0 0 30px;
   box-sizing: border-box;
@@ -261,10 +262,16 @@ canvas{
   color: rgba(255,255,255,.70);
 }
 
+.contact-footer:hover{
+  font-size: 20px;
+  font-weight: bold;
+  text-decoration: line-through;
+}
+
 .contact-heading{
   font-size: 30px;
   padding: 20px 0;
-  text-align: center;
+  text-align: justify;
   font-family: monospace;
 }
 .contact-footer {
@@ -295,9 +302,23 @@ canvas{
   display: inline-block;
   height: 350px;
 }
+.my-chart{
+  margin-top: 20%;
+  margin-left: 2%;
+}
+
 @media only screen and (max-width: 700px) {
   .about{
     font-size: 16px;
+    width: 70%;
+    top: 15%;
+    left: 30%;
+  }
+  .about-title{
+    margin: 0;
+  }
+  .about-para{
+    font-size: 12px;
   }
   .typewriter {
     white-space: nowrap;
@@ -340,15 +361,32 @@ canvas{
     clip: rect(0px,350px, 350px, 175px);
   }
   .tooltip{
-    top: 22%;
+    top: 12%;
     padding: 10px;
     border: 1px solid #b61a25;
     border-radius: 4px;
+    font-size: 12px;
+  }
+  .contact{
+    top: 36%;
+    padding: 0;
+    left: 25%;
+    width: 75%;
   }
   .contact-heading{
-    font-size: 20px;
+    font-size: 12px;
   }
   .contact-footer {
     font-size: 12px;
   }
+  .my-chart{
+    margin-top: 49%;
+    margin-left: 5%;
+  }
+}
+.red{
+  color: #b61a25;
+}
+.no-justify{
+  text-align: left;
 }

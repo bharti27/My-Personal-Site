@@ -24,7 +24,7 @@ class App extends React.Component {
     render() {
         return (
             <React.Fragment>
-                { ! this.state.showTransition ? <TypeHello />: null}
+                { ! this.state.showTransition ? <TypeHello /> : null }
                     <CSSTransition
                         in = { this.state.showTransition }
                         appear = {false}
