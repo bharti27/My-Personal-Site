@@ -107,10 +107,10 @@ constructor(props){
                                     node.innerHTML = "<b>The Washington Post</b> - May' 2019 - Dec' 2019 <br> Software Developer";
                                     break;
                                 case "80":
-                                    node.innerHTML = "<b>GMU</b> - Jan' 2020 - May' 2020 <br> CS Graduate Teaching Assistance";
+                                    node.innerHTML = "<b>GMU</b> - Jan' 2020 - May' 2020 <br> CS Graduate Teaching Assistant";
                                     break;
                                 case "100":
-                                    node.innerHTML = "<b>Oracle</b> - May' 2020 - present <br> Full Stack Software Developer III";
+                                    node.innerHTML = "<b>Oracle</b> - May' 2020 - present <br> Full-Stack Software Developer III";
                                     break;
                                 case "10": break;
                             }

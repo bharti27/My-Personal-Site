@@ -202,7 +202,7 @@ canvas{
   vertical-align: top;
   transition: opacity 300ms ease-in;
   opacity: 0;
-  overflow: hidden;
+  overflow: auto;
 }
 
 .about {
@@ -319,6 +319,7 @@ canvas{
     width: 70%;
     top: 15%;
     left: 30%;
+    height: 80%;
   }
   .about-title{
     margin: 0;
