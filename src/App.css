@@ -30,6 +30,7 @@ html,body{
   background:#111;
   font-family: monospace, sans-serif;
   line-height: 1.4;
+  -webkit-tap-highlight-color: transparent;
 }
 
 canvas{
@@ -201,6 +202,7 @@ canvas{
   vertical-align: top;
   transition: opacity 300ms ease-in;
   opacity: 0;
+  overflow: hidden;
 }
 
 .about {
