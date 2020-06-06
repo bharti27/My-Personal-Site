@@ -4,6 +4,7 @@ import { CSSTransition } from 'react-transition-group';
 import TypeHello from "./TypeHello";
 import CreativeMind from "./CreativeMind";
 import BlackMind from "./BlackMind";
+import { Transition } from 'react-transition-group';
 
 class App extends React.Component {
     constructor(props){
@@ -34,7 +35,15 @@ class App extends React.Component {
                     >
                         <CreativeMind { ...this.state }/>
                 </CSSTransition>
-                <BlackMind { ...this.state }/>
+                <Transition in={this.state.about || this.state.skill || this.state.contact} timeout={{
+                    appear: 300,
+                    enter: 300,
+                    exit: 500,
+                }}>
+                    { state => (
+                        <BlackMind { ...this.state }  state = { state}/>
+                    )}
+                </Transition>
                 <nav className="navigation">
                     <span onClick={ this.showHome }>HOME</span> / <span onClick={ this.showAbout }>ABOUT</span> / <span onClick={ this.showSkills }>SKILLS</span> / <span onClick={ this.showContact }>CONTACT</span>
                 </nav>

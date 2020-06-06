@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import Chart from "chart.js";
-import Oracle from "./logo-oracle.png";
-import Avizva from "./av.png";
+import Oracle from "./oracle-logo.png";
+import Avizva from "./avizva-logo.png";
 import WP from "./WP-logo.png";
 import GMU from "./GMU-logo-1.png";
 import {
@@ -41,7 +41,7 @@ constructor(props){
         let az = new Image();
         az.src = Avizva;
         az.width = 50;
-        az.height = 50;
+        az.height = 20;
         let wp = new Image();
         wp.src = WP;
         wp.height = 50;
@@ -53,7 +53,7 @@ constructor(props){
         let o = new Image();
         o.src = Oracle;
         o.height = 50;
-        o.width = 50;
+       o.width = 50;
         const chartJson = {
             type: 'line',
             data: {
@@ -73,7 +73,7 @@ constructor(props){
                 layout: {
                     padding: {
                         left: 0,
-                        right: 20,
+                        right: 30,
                         top: 0,
                         bottom: 0
                     }
@@ -85,11 +85,12 @@ constructor(props){
                 responsive: true,
                 title: {
                     display: true,
-                    text: 'Experience over time',
+                    text: 'Experience Over Time',
                     fontColor: 'rgba(255,255,255,.70)',
                     fontFamily: 'monospace',
                     position: 'bottom',
-                    fontSize: '16'
+                    fontSize: '16',
+                    fontWeight: 'normal'
                 },
                 tooltips: {
                     // Disable the on-canvas tooltip

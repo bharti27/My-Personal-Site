@@ -127,7 +127,7 @@ canvas{
 
 /* Animation */
 .typewriter {
-  animation: animated-text 2s steps(30,end) 1s 1 normal both;
+  animation: animated-text 1s steps(20,end) 1s 1 normal both;
 }
 
 /* text animation */
@@ -190,7 +190,7 @@ canvas{
   height: 100%;
   display: inline-block;
   position: absolute;
-  transition: transform 100ms linear
+  transition: transform 100ms linear;
 }
 .BlackMind{
   width: 70%;
@@ -199,24 +199,27 @@ canvas{
   position: relative;
   left: 25%;
   vertical-align: top;
+  transition: opacity 300ms ease-in;
+  opacity: 0;
 }
 
 .about {
-  font-size: 30px;
   position: relative;
-  color: #b3b3b3;;
+  color: #b3b3b3;
   top: 5%;
   width: 85%;
   left: 10%;
-  text-align: justify;
   -webkit-font-smoothing: antialiased;
 }
 .about-title {
   display: inline-block;
   vertical-align: top;
-  margin: 175px 0 0 30px;
+  margin: 130px 0 30px 30px;
   box-sizing: border-box;
   text-align: center;
+    font-size: 35px;
+    text-transform: uppercase;
+    font-weight: normal;
 }
 
 .typewriter h1 {
@@ -251,7 +254,8 @@ canvas{
 }
 .about-para{
   padding: 15px 0;
-  font-size: 18px;
+  font-size: 22px;
+    text-align: left;
 }
 
 .contact {
@@ -316,6 +320,7 @@ canvas{
   }
   .about-title{
     margin: 0;
+      font-size: 20px;
   }
   .about-para{
     font-size: 12px;
@@ -368,7 +373,7 @@ canvas{
     font-size: 12px;
   }
   .contact{
-    top: 36%;
+    top: 30%;
     padding: 0;
     left: 25%;
     width: 75%;
@@ -389,4 +394,13 @@ canvas{
 }
 .no-justify{
   text-align: left;
+}
+
+.entering{
+  //transform: translateX( 5% );
+  opacity: 0;
+}
+.entered{
+  //transform: translateX( 0% );
+  opacity: 1;
 }

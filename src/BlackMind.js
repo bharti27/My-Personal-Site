@@ -1,10 +1,8 @@
-import React, { Component } from 'react'
-import avatarWhite from "./avatar-white.svg";
+import React from 'react'
 import WorkComponent from "./WorkComponent";
 import BlogComponent from "./BlogComponent";
 import AboutComponent from "./AboutComponent";
 import ContactComponent from "./ContactComponent";
-import {CSSTransition} from "react-transition-group";
 
 export default class BlackMind extends React.Component {
     constructor( props ) {
@@ -12,7 +10,7 @@ export default class BlackMind extends React.Component {
     }
     render () {
         return (
-            <div className={"BlackMind"}>
+            <div className={"BlackMind " + this.props.state } >
                 { this.showComponents() }
             </div>
         )
