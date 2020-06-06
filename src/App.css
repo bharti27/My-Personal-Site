@@ -390,6 +390,15 @@ canvas{
     margin-top: 49%;
     margin-left: 5%;
   }
+  .contact-footer::after {
+   display: none;
+ }
+  .contact-footer:hover {
+   display: inline;
+    font-size: 12px;
+    font-weight: normal;
+    text-decoration: none;
+ }
 }
 .red{
   color: #b61a25;
