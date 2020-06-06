@@ -45,7 +45,7 @@ class App extends React.Component {
                     )}
                 </Transition>
                 <nav className="navigation">
-                    <span onClick={ this.showHome }>HOME</span> / <span onClick={ this.showAbout }>ABOUT</span> / <span onClick={ this.showSkills }>SKILLS</span> / <span onClick={ this.showContact }>CONTACT</span>
+                    <span onClick={ this.showHome }>HOME</span> / <span onClick={ this.showAbout }>ABOUT</span> / <span onClick={ this.showSkills }>EXPERIENCE</span> / <span onClick={ this.showContact }>CONTACT</span>
                 </nav>
             </React.Fragment>
         );
